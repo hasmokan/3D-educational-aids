@@ -1,0 +1,77 @@
+#
+# Wavefront material file
+# Converted by Meshlab Group
+#
+
+newmtl material_0
+Ka 0.200000 0.200000 0.200000
+Kd 0.494118 0.494118 0.494118
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd US_Apc_8.dds
+
+newmtl material_1
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.501961 0.501961
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd US_Apc_c.dds
+
+newmtl material_2
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.584314 0.584314
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd US_Apc_i.dds
+
+newmtl material_3
+Ka 0.200000 0.200000 0.200000
+Kd 0.513726 0.513726 0.513726
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd US_Apc_2.dds
+
+newmtl material_4
+Ka 0.200000 0.200000 0.200000
+Kd 0.509804 0.509804 0.509804
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd us_apc_s.dds
+
+newmtl material_5
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.584314 0.584314
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd US_Apc_t.dds
+
+newmtl material_6
+Ka 0.200000 0.200000 0.200000
+Kd 0.486275 0.486275 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd us_apc_r.dds
+
+newmtl material_7
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.501961 0.501961
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd US_Apc_w.dds
+

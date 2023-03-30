@@ -1,0 +1,15 @@
+newmtl GLASS
+map_Ka mat0_c.jpg
+map_Kd mat0_c.jpg
+newmtl MAIN
+map_Ka mat1_c.jpg
+map_Kd mat1_c.jpg
+newmtl MAIN 2
+map_Ka mat0_c.jpg
+map_Kd mat0_c.jpg
+newmtl METAL CLAIRE
+map_Ka mat0_c.jpg
+map_Kd mat0_c.jpg
+newmtl METALFONCE
+map_Ka mat0_c.jpg
+map_Kd mat0_c.jpg
