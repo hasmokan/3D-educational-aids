@@ -1,133 +1,207 @@
-body 
-{
-	background-color: #eeeeee;
-	background-image: url("../images/pixels.png");
-	background-repeat: repeat;      /* repeat, no-repeat */
-	background-attachment: fixed;   /* scroll, fixed */
-	background-position: top left;  /* for no-repeat setting: top/bottom, left/right */
-	margin: 2% 5% 0% 5%;            /* top, left, bottom, right or TRBL */
-	
-	font-family: Georgia, Serif;	/* list font names in order of preference */
-	font-weight: normal;            /* normal, bold */
-	font-style: normal;             /* normal, italic */
-	font-variant: normal;           /* normal, small-caps */
-	font-size: 16px;                /* font size */
-	color: #000000;                 /* hexadecimal RGB color code */
-	text-decoration: none;          /* none, underline, overline, line-through */
-	text-align: left;               /* left, right, center, justify */
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.fancy
-{
-	min-height: 150px;
-	/* next two lines for elder IE compatibility */
-	height: auto !important; 
-	height: 150px; 
-	
-	/* Background color and gradients */
-	background: #eeeeee;
-	background: -moz-linear-gradient(top, #ffffff, #cccccc);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#cccccc));
-	/* really nifty translucence */
-	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8), rgba(200, 200, 200, 0.8) );
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(255, 255, 255, 0.8) ), to( rgba(200, 200, 200, 0.8) ));
-	
-	/* Rounded corners */
-	-moz-border-radius: 15px 15px 15px 15px;
-	-webkit-border-radius: 15px 15px 15px 15px;
-	border-radius: 15px 15px 15px 15px;
+body {
+    width: 100%;
 }
 
-/* Page text links */
-a 
-{
-	font-size: 20px;
-	font-weight: bold;
-	font-variantx: small-caps;
-	color:#00c;
-	text-shadow: 1px 1px 0px #aaa;
-	margin: 13px 0px 0px 0px;
-	text-decoration: none;
-	
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out; 
+
+
+/* 去除内核的滚动条 */
+::-webkit-scrollbar {
+    display: none;
 }
 
-.toc
-{
-	font-size: 16px;
+/* 去掉a标签的修饰 */
+a {
+    text-decoration: none;
 }
 
-a:hover 
-{
-	color:#c00;
-	/*text-shadow: 1px 1px 0px #f00;
-	/* gradual change */
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out; 
+
+/* 页面主体 */
+main {
+    scroll-behavior: smooth;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow: scroll;
+    height: 100vh;
+    width: 100vw;
+
 }
 
-.superText
-{
-	color: #000;
-	text-shadow: 1px 1px 0px #aaa;
+.text {
+    display: block;
+    margin-top: 20%;
+    margin-left: 35%;
 }
 
-a .superImage
-{  
-	height: 150px;
-	width: 225px;
-	border: 1px solid #000000;
-	margin: 0px 20px 0px 0px;
-	float:left;
-	
-	
-	/* Rounded corners */
-	-moz-border-radius: 15px 15px 15px 15px;
-	-webkit-border-radius: 15px 15px 15px 15px;
-	border-radius: 15px 15px 15px 15px;
-	
-	position: relative; 
-	
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out; 
-}  
+.text .head {
+    margin-left: 0;
+    font-size: 3vw;
+    border-left: 10px solid gold;
+}
 
-a:hover .superImage
-{  
-	top: -10px;  
-	
-	/* fallback on standard opaque colors */
-	-moz-box-shadow: 10px 10px 5px #888;
-	-webkit-box-shadow: 10px 10px 5px #888;
-	box-shadow: 10px 10px 5px #888;
-	/* translucent: the way shadows should be */
-	-moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
-	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
-	
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out;
-}  
+section {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
 
-.bigTitle
-{
-	font-size: 32px;
-	font-weight: bold;
-	font-variantx: small-caps;
-	color:#004;
-	text-align: center;
-	text-shadow: -1px -1px 2px #fff, 1px 1px 3px #000;	
+section:nth-child(1) {
+    background-image: url("../images/home/ar.jpg");
+    backdrop-filter: saturate(180%) blur(20px);
+    background-size: 100vw 100vh;
+    text-align: center;
+    color: #fff;
+}
+
+section:nth-child(1) img {
+
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    z-index: -1;
+    width: 100% !important;
+    /* height: 100% !important; */
+    overflow: hidden;
+
+}
+
+section:nth-child(2) {
+
+    text-align: center;
+    /* background-color: blue; */
+    color: #fff;
+}
+
+section:nth-child(3) {
+    text-align: center;
+    /* background-color: blueviolet; */
+    color: #fff;
+}
+
+
+
+/* 瀑布流布局 */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* 需要指定高度 */
+    height: 800px;
+}
+
+.item {
+    width: 25%;
+}
+
+.item img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* 滚动导航条 */
+.nav {
+
+    /*align-items: center;*/
+    width: 100% !important;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: rgb(139, 91, 79);
+    /* 修改数值 */
+
+}
+
+
+.nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*align-items: center;*/
+    right: 5%;
+}
+
+.nav ul .nav-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 如果导航栏就六个导航，那么每个导航的宽度都是整个导航
+    的四分之一 */
+
+    width: calc((100% / 4)*1);
+    height: 10px;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.nav ul li {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font: 100 2vw '优设标题黑';
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+}
+
+.nav ul li i {
+    font-size: 2vw;
+}
+
+.active1 {
+    position: absolute;
+    margin-left: 0% !important;
+    background-color: rgb(250, 190, 250);
+}
+
+.active2 {
+    position: absolute;
+    margin-left: calc(100% / 4 *1) !important;
+    background-color: red;
+}
+
+.active3 {
+    position: absolute;
+    margin-left: calc(100% / 4 *2) !important;
+    background-color: #d18df8;
+}
+
+.active4 {
+    position: absolute;
+    margin-left: calc(100% / 4 *3) !important;
+    background-color: #ffb1b1;
+}
+
+
+.nav ul li:nth-child(1):hover~.nav-box {
+    margin-left: 0% !important;
+    background-color: rgb(250, 190, 250);
+}
+
+.nav ul li:nth-child(2):hover~.nav-box {
+    margin-left: calc(100% / 4 *1) !important;
+    background-color: red;
+}
+
+.nav ul li:nth-child(3):hover~.nav-box {
+    margin-left: calc(100% / 4 *2) !important;
+    background-color: #d18df8;
+}
+
+.nav ul li:nth-child(4):hover~.nav-box {
+    margin-left: calc(100% / 4 *3) !important;
+    background-color: #ffb1b1;
 }

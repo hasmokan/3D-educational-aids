@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横屏滚动贴合</title>
+    <!-- <link href="1.css" rel="stylesheet" type="text/css"> -->
+    <style>
+        * {
+            /* 初始化页面 */
+            margin: 0;
+            padding: 0;
+        }
+
+        .c1 {
+            /* 弹性布局 */
+            display: flex;
+            /* 100%窗口高度和宽度 */
+            height: 100vh;
+            width: 100vw;
+            /* 设置滚动贴合的方式，沿x轴滚动，mandatory表示强制滚动 */
+            scroll-snap-type: x mandatory;
+            /* 溢出时，水平保留滚动条，垂直隐藏滚动条 */
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        .c1 div {
+            /* 100%窗口高度和宽度 */
+            height: 100vh;
+            width: 100vw;
+            /* 弹性布局，元素水平垂直居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 调用自定义背景颜色 */
+            background-color: var(--c);
+            /* 设置字体 */
+            font-size: 200px;
+            font-weight: bold;
+            color: white;
+            /* 设置下一页的内容会滚动贴合到顶部 */
+            scroll-snap-align: start;
+            /* 在flex容器中，当空间不够时，元素会被挤压，
+    设置flex-shrink：0；可以防止元素被挤压 */
+            flex-shrink: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="c1">
+        <!-- --c为自定义属性（颜色），可以通过var函数进行调用 -->
+        <div style="--c: lightcoral;">1</div>
+        <div style="--c: lightseagreen;">2</div>
+        <div style="--c: lightsalmon;">3</div>
+        <div style="--c: lightskyblue;">4</div>
+    </div>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
