@@ -35,13 +35,29 @@ main {
     display: block;
     margin-top: 20%;
     margin-left: 35%;
+    font-size: 20px;
 }
 
 .text .head {
+    background-image: -webkit-linear-gradient(right, #f2dd6e 0%, #cff27e 37%, #ef959d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
     margin-left: 0;
     font-size: 3vw;
     border-left: 10px solid gold;
+
+
+
 }
+
+.content {
+    text-align: left;
+
+}
+
+
+
 
 section {
     width: 100vw;
@@ -59,7 +75,6 @@ section:nth-child(1) {
 }
 
 section:nth-child(1) img {
-
     position: absolute;
     left: 0px;
     top: 10px;
@@ -71,36 +86,37 @@ section:nth-child(1) img {
 }
 
 section:nth-child(2) {
-
-    text-align: center;
+    background-image: url("../images/home/back2.jpg");
+    backdrop-filter: saturate(180%) blur(20px);
+    background-size: 100vw 100vh;
+    /* text-align: center; */
     /* background-color: blue; */
     color: #fff;
 }
 
-section:nth-child(3) {
-    text-align: center;
-    /* background-color: blueviolet; */
-    color: #fff;
-}
+
 
 
 
 /* 瀑布流布局 */
 .container {
+    padding-top: 50px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     /* 需要指定高度 */
-    height: 800px;
+    height: 95vh;
 }
 
-.item {
+/* .item {
     width: 25%;
 }
 
 .item img {
     width: 100%;
-}
+} */
 
 
 
@@ -119,9 +135,10 @@ section:nth-child(3) {
     bottom: 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    background-color: rgb(139, 91, 79);
-    /* 修改数值 */
 
+    /* 修改数值 */
+    background: rgba(29, 29, 31, 0.72);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 
@@ -164,7 +181,7 @@ section:nth-child(3) {
 .active1 {
     position: absolute;
     margin-left: 0% !important;
-    background-color: rgb(250, 190, 250);
+    background-color: rgb(250, 190, 250, 0.5);
 }
 
 .active2 {
@@ -204,4 +221,131 @@ section:nth-child(3) {
 .nav ul li:nth-child(4):hover~.nav-box {
     margin-left: calc(100% / 4 *3) !important;
     background-color: #ffb1b1;
+}
+
+
+/* 瀑布流资料卡 */
+
+
+
+
+
+.profile-card {
+    width: 20vw;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: #2c3a47;
+    padding: 60px 40px;
+}
+
+.pic {
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(130deg, #74b9ff, #e66767);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient {
+    25% {
+        background-position: left bottom;
+    }
+
+    50% {
+        background-position: right bottom;
+    }
+
+    75% {
+        background-position: right top;
+    }
+
+    100% {
+        background-position: left top;
+    }
+}
+
+.pic img {
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+}
+
+.name {
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 2vw;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 18px;
+    color: gold;
+}
+
+.sm {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.sm a {
+    color: #f2f2f2;
+    width: 56px;
+    font-size: 22px;
+    transition: .3s linear;
+}
+
+.sm a:hover {
+    color: #e66767;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 1vw 2vw;
+    color: #e66767;
+    border: 2px solid #e66767;
+    border-radius: 6px;
+    margin-top: 16px;
+    transition: .3s linear;
+}
+
+.contact-btn:hover {
+    background: #e66767;
+    color: #f2f2f2;
+}
+
+.card-footer {
+    background: #f4f4f4;
+    padding: 60px 10px;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #e66767;
+}
+
+.item span {
+    display: block;
+    color: #2c3a47;
+    font-size: 30px;
+}
+
+.border {
+    width: 1px;
+    height: 30px;
+    background: #bbb;
 }
